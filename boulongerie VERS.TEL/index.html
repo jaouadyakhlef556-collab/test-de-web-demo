@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boulangerie du Coin</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('img/materiel-boulangerie-scaled.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+header {
+    background: rgba(200, 155, 109, 0.85);
+    text-align: center;
+    padding: 40px 20px;
+}
+header h1 { margin: 0; font-size: 32px; }
+header p { font-size: 18px; }
+section {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+h2 { color: #f7c59f; margin-bottom: 15px; }
+.grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+.card { background: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 15px; text-align: center; width: 250px; }
+.card img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+.btn { display: inline-block; padding: 12px 25px; background: #b8743a; color: white; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 10px; }
+footer { background: rgba(0,0,0,0.8); text-align: center; padding: 20px; font-size: 14px; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    header { padding: 25px 10px; }
+    header h1 { font-size: 24px; }
+    header p { font-size: 16px; }
+    section { padding: 20px; }
+    .grid { flex-direction: column; align-items: center; }
+    .card { width: 90%; }
+    .card img { width: 100%; height: auto; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Boulangerie du Coin</h1>
+    <p>Pains & pâtisseries faits maison</p>
+</header>
+
+<section class="about">
+    <h2>À propos</h2>
+    <p>Bienvenue dans notre boulangerie. Nous proposons des pains frais, des croissants et des gâteaux faits maison tous les jours.</p>
+</section>
+
+<section class="products">
+    <h2>Nos produits</h2>
+    <div class="grid">
+        <div class="card"><img src="img/baguette-de-grains-entiers-bio-posee-sur-toile-de-lin.jpg" alt="Pain"><h3>Pain traditionnel</h3></div>
+        <div class="card"><img src="img/croissants-sur-une-vieille-table-en-bois.jpg" alt="Croissants"><h3>Croissants</h3></div>
+        <div class="card"><img src="img/sandwich-delicieux-a-l-oignon-bleu-au-mais-et-a-la-viande.jpg" alt="sandwich"><h3>Gâteaux</h3></div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p>📍 12 Rue de la Boulangerie, 75001 Paris</p>
+    <p>📞 01 23 45 67 89</p>
+    <a class="btn" href="tel:0123456789">Appeler</a>
+</section>
+
+<footer>
+    © 2025 Boulangerie du Coin
+</footer>
+
+</body>
+</html>
