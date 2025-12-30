@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Diablotin Boulangerie Pâtisserie</title>
+
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #0f0f0f;
+      --accent: #ffdd9b;
+      --glass: rgba(255, 255, 255, 0.1);
+      --border-glow: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--bg-color);
+      color: #eee;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER FIXE */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    header.scrolled {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+                  url('img/hero.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      padding-top: 150px; /* para que no quede debajo del menú fijo */
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: var(--accent);
+      border: none;
+      color: #000;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 40px 60px;
+    }
+
+    h2.section-title {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about .text-box {
+      background: var(--glass);
+      border: var(--border-glow);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+      font-size: 18px;
+      line-height: 1.6;
+      color: #f5f5f5;
+      font-weight: 400;
+      text-align: justify;
+    }
+
+    .about img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* hace que la imagen llene el espacio sin deformarse */
+      border-radius: 15px;
+    }
+    
+
+    }
+    .glass-card {
+      background: var(--glass);
+      border: var(--border-glow);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+    }
+
+    /* PRODUITS */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* GALERIE */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .galeria-grid img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* CONTACT */
+    #contact {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      color: #fff;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-row {
+       display: flex;
+       gap: 30px;
+       margin-top: 40px;
+       flex-wrap: wrap;
+     }
+
+    .map-box {
+       flex: 2;
+       min-width: 300px;
+       height: 350px;
+       border-radius: 15px;
+       overflow: hidden;
+    }
+
+    .horaires-box {
+       flex: 1;
+       min-width: 250px;
+       padding: 30px;
+       font-size: 18px;
+       line-height: 1.6;
+    }
+
+    .horaires-box h3 {
+       color: var(--accent);
+       margin-bottom: 15px;
+       font-family: 'Orbitron', sans-serif;
+    }
+
+    @media (max-width: 700px) {
+      .contact-row {
+        flex-direction: column;
+      } 
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU FIXE -->
+  <header id="header">
+    <h1>Le Diablotin Boulangerie Pâtisserie</h1>
+    <nav>
+      <a href="#inicio">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#produits">Produits</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+  <h2>BIENVENUE</h2>
+  <p>LE DIABLOTIN BOULANGERIE PÂTISSERIE</p>
+  <button><!-- TEXTE DU BOUTON --></button>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <h2 class="section-title">À propos</h2>
+
+  <div class="about">
+    <img src="img/hero.jpg" alt="Devanture de la boulangerie">
+
+    <div class="text-box">
+      Le Diablotin, une adresse immanquable pour les amateurs de douceurs artisanales à Limoges. 
+      Cette boulangerie-pâtisserie, située au 229 rue François Perrin, offre une large variété de pains, 
+      viennoiseries, gâteaux et pâtisseries, tous confectionnés avec des ingrédients de qualité et une passion 
+      incontestable pour le métier. Les saveurs de Provence, de Bretagne ou d'ailleurs s'invitent régulièrement 
+      dans les étals du Diablotin, pour le plus grand plaisir des clients fidèles. Outre la qualité des produits, 
+      l'accueil chaleureux et le respect des traditions artisanales font partie intégrante de l'expérience au 
+      Diablotin. Une adresse incontournable pour tous les amoureux du bon goût.
+    </div>
+  </div>
+</section>
+
+  <!-- PRODUITS -->
+  <section id="produits">
+    <h2 class="section-title">Produits</h2>
+    <div class="menu-grid">
+
+      <div class="glass-card menu-item">
+        <img src="img/croisant.jpg" alt="">
+        <h3></h3>
+        <p>Chocolatine pur beurre, Brochette sucre rasins, Pain brioche</p>
+      </div>
+
+      <div class="glass-card menu-item">
+        <img src="img/eclaire.jpg" alt="">
+        <h3><!-- NOM PRODUIT 2 --></h3>
+        <p>Eclaire au nutella et des gruc de cacao, Eclaire aux fraises, Eclaire au caramel beurre</p>
+      </div>
+
+      <div class="glass-card menu-item">
+        <img src="img/tarte.jpg" alt="">
+        <h3><!-- NOM PRODUIT 3 --></h3>
+        <p>Religiuse chocolat et vanille, Religieuse café, Eclaire chocolat, Eclaire café</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHOTOS -->
+  <section id="photos">
+    <h2 class="section-title">Photos</h2>
+    <div class="galeria-grid">
+      <img src="img/vitrine.jpg" alt="">
+      <img src="img/vitrine2.jpg" alt="">
+      <img src="img/" alt="">
+      <img src="<!-- PHOTO 4 -->" alt="">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+ <section id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="glass-card" style="max-width:700px;margin:0 auto;text-align:center;">
+    <p><strong>Adresse :</strong> 229 rue François Perrin 87000 Limoges</p>
+    <p><strong>Téléphone :</strong> 05 55 32 94 69</p>
+  </div>
+   <div class="social-links">
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">TikTok</a>
+    </div>
+  <div class="contact-row">
+    <!-- Mapa a la izquierda -->
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999034410876!2d1.2285535!3d45.8249174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fecb5ebf715555%3A0x96c6a5aef24518ad!2sLe%20Diablotin%20Boulangerie%20P%C3%A2tisserie!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Horarios a la derecha -->
+    <div class="glass-card horaires-box">
+      <h3>Horaires d’ouverture</h3>
+      <p><strong>Lundi :</strong> 06h00 – 20h00</p>
+      <p><strong>Mardi :</strong> 06h00 – 20h00</p>
+      <p><strong>Mercredi :</strong> 06h00 – 20h00</p>
+      <p><strong>Jeudi :</strong> 06h00 – 20h00</p>
+      <p><strong>Vendredi :</strong> 06h00 – 20h00</p>
+      <p><strong>Samedi :</strong> Fermé</p>
+      <p><strong>Dimanche :</strong> 06h00 – 14h00</p>
+    </div>
+  </div>
+</section>
+  <footer>
+    <p><!-- COPYRIGHT --></p>
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("header");
+      if (window.scrollY > 50) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    });
+  </script>
+
+</body>
+</html>
