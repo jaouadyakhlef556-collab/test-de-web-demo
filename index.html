@@ -668,9 +668,13 @@
 
   .menu-image-section {
     display: none;
+  } 
 
+  .parallax-bg {
+    background-attachment: scroll !important;
   }
 }
+
   </style>
 </head>
 
@@ -918,11 +922,13 @@
           startDist = getDist(e.touches);
           lastScale = currentScale;
           e.preventDefault();
-        } else if (e.touches.length === 1 && currentScale > 1) {
+        else if (e.touches.length === 1 && currentScale > 1) {
           isPanning = true;
           startPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
           e.preventDefault();
         }
+        */
+
         // double-tap to reset
         const now = Date.now();
         if (e.touches.length === 1 && now - lastTap < 300) {
@@ -942,15 +948,14 @@
           currentScale = scale;
           setTransform();
           e.preventDefault();
-        } else if (isPanning && e.touches.length === 1) {
-          const dx = e.touches[0].clientX - startPan.x;
-          const dy = e.touches[0].clientY - startPan.y;
-          lastPan = { x: lastPan.x + dx, y: lastPan.y + dy };
-          startPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-          setTransform();
-          e.preventDefault();
-        }
-      }
+       else if (isPanning && e.touches.length === 1) {
+           const dx = e.touches[0].clientX - startPan.x;
+           const dy = e.touches[0].clientY - startPan.y;
+           lastPan = { x: lastPan.x + dx, y: lastPan.y + dy };
+           startPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+           setTransform();
+           e.preventDefault();
+         }
 
       function onTouchEnd(e) {
         if (window.innerWidth > 768) return;
@@ -1000,3 +1005,4 @@
   
 </body>
 </html>
+
