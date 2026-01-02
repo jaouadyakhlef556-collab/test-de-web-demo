@@ -978,7 +978,7 @@
       document.addEventListener('touchstart', function (e) {
         if (!modal.classList.contains('active')) return;
         onTouchStart(e);
-      }, { passive: false });
+      }, { passive: true });
 
       document.addEventListener('touchmove', function (e) {
         if (!modal.classList.contains('active')) return;
@@ -1006,5 +1006,6 @@
   
 </body>
 </html>
+
 
 
