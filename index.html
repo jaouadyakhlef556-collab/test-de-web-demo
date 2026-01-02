@@ -1,0 +1,1013 @@
+<html lang="fr">
+
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@300;500;700&display=swap"
+    rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>L'Instant Gourmand Boulangerie & Pâtisserie Artisanale à Rennes</title>
+
+  <meta name="description"
+    content="L'Instant Gourmand, boulangerie-pâtisserie artisanale située au 32 rue Jules Lallemand à Rennes. Pains, viennoiseries, pâtisseries, galettes, bûches et créations maison. Commandes au 02 23 48 80 05.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="L'Instant Gourmand">
+
+  <meta name="keywords"
+    content="boulangerie Rennes, pâtisserie Rennes, artisan boulanger Rennes, viennoiseries Rennes, galette des rois Rennes, bûches de Noël Rennes, L'Instant Gourmand Rennes, pain artisanal Rennes, pâtisseries artisanales Rennes">
+
+  <meta property="og:title" content="L'Instant Gourmand – Boulangerie & Pâtisserie à Rennes">
+  <meta property="og:description"
+    content="Découvrez nos pains, viennoiseries, pâtisseries et créations artisanales. Situés au 32 rue Jules Lallemand, Rennes.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:url" content="https://www.tudominio.fr">
+  <meta property="og:image" content="https://www.tudominio.fr/images/og-image.jpg">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "L'Instant Gourmand",
+  "image": "https://www.tudominio.fr/images/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "32 Rue Jules Lallemand",
+    "addressLocality": "Rennes",
+    "postalCode": "35000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.103,
+    "longitude": -1.682
+  },
+  "telephone": "02 23 48 80 05",
+  "priceRange": "€",
+  "servesCuisine": "Boulangerie, Pâtisserie",
+  "url": "https://www.tudominio.fr",
+  "sameAs": [
+    "https://www.instagram.com/instantgourmand35",
+    "https://www.facebook.com/p/LInstant-Gourmand-100089331460940/"
+  ]
+}
+</script>
+
+  <style>
+    :root {
+      --bg-color: #0f0f0f;
+      --accent: #ffdd9b;
+      --glass: rgba(255, 255, 255, 0.1);
+      --border-glow: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--bg-color);
+      color: #eee;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    header.scrolled {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('img/fond.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      padding-top: 150px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: var(--accent);
+      border: none;
+      color: #000;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    section {
+      padding: 100px 40px 60px;
+    }
+
+    .parallax-bg {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url('img/fond2.jpg') center/cover fixed;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image {
+      width: 550px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 30px rgba(255, 221, 155, 0.3);
+      max-width: 90%;
+      resize: both;
+      overflow: auto;
+    }
+
+    h2.section-title {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about .text-box {
+      background: var(--glass);
+      border: var(--border-glow);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+      font-size: 18px;
+      line-height: 1.6;
+      color: #f5f5f5;
+      font-weight: 400;
+      text-align: justify;
+    }
+
+    .about img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .glass-card {
+      background: var(--glass);
+      border: var(--border-glow);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .galeria-grid img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .galeria-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 221, 155, 0.5);
+    }
+
+    .menu-actualidade-container {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .menu-image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-image-section img {
+      width: 80%;
+      max-width: 350px;
+      border-radius: 15px;
+    }
+
+    .actualidade-section {
+      flex: 1;
+      background: var(--glass);
+      border: var(--border-glow);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+    }
+
+    .photos {
+      background: var(--glass);
+      border: var(--border-glow);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+    }
+
+    .instagram-feed {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+      padding: 10px 0;
+    }
+
+    .instagram-post {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #f5f5f5;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .instagram-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .instagram-post img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .instagram-post:hover img {
+      transform: scale(1.08);
+    }
+
+    .instagram-post::after {
+      content: "\f16d";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 22px;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .instagram-post:hover::after {
+      opacity: 1;
+    }
+
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90vh;
+      overflow: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 50px rgba(255, 221, 155, 0.5);
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      touch-action: none;
+      /* allow capture of pinch/pan gestures on mobile */
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #ffdd9b;
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 2001;
+    }
+
+    .close-modal:hover {
+      color: #fff;
+    }
+
+    #contact {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      color: #fff;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .menu-title {
+      color: #ffdd9b;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .menu-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-cards .glass-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #ffdd9b;
+    }
+
+    .menu-cards .glass-card p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .menu-cards .glass-card .price {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffe0c2;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .map-box {
+      flex: 2;
+      min-width: 300px;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .horaires-box {
+      flex: 1;
+      min-width: 250px;
+      padding: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .horaires-box h3 {
+      color: var(--accent);
+      margin-bottom: 15px;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .actualite-image-box {
+  width: 100%;
+  max-width: 650px; 
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.actualite-image-box img {
+  width: 100%;
+  height: auto; 
+  display: block;
+  object-fit: cover; 
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+    .glass-card .social-icons {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 20px !important;
+      margin-top: 15px !important;
+    }
+
+    .glass-card .social-icons a {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 45px !important;
+      height: 45px !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+      border-radius: 50% !important;
+      font-size: 22px !important;
+      transition: 0.3s ease !important;
+    }
+
+    .glass-card .social-icons a:hover {
+      background: #d4a373 !important;
+      color: #ffffff !important;
+    }
+
+    @media (max-width: 700px) {
+      .contact-row {
+        flex-direction: column;
+      }
+
+      @media (max-width: 768px) {
+
+        header {
+          padding: 10px 20px;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        header h1 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        nav a {
+          margin: 0 10px;
+          font-size: 14px;
+        }
+
+        .hero h2 {
+          font-size: 32px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        section {
+          padding: 80px 20px 40px;
+        }
+
+        .about {
+          grid-template-columns: 1fr;
+        }
+
+        .about img {
+          height: 250px;
+        }
+
+        .text-box {
+          font-size: 16px;
+          padding: 20px;
+        }
+
+        .menu-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .galeria-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-row {
+          flex-direction: column;
+        }
+
+        .map-box {
+          height: 250px;
+        }
+
+        .horaires-box {
+          padding: 20px;
+          font-size: 16px;
+        }
+
+        .reseaux-section {
+          margin-top: 30px;
+          width: 100%;
+        }
+
+        .reseaux-section h2 {
+          font-size: 32px;
+          color: #ffdd9b;
+          margin-bottom: 15px;
+          text-align: left;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 25px;
+          width: 100%;
+        }
+
+        .social-icons a {
+          display: inline-block !important;
+          background-color: #ffffff !important;
+          color: #000000 !important;
+          border-radius: 50% !important;
+          padding: 12px !important;
+          font-size: 24px !important;
+          text-decoration: none !important;
+          transition: 0.3s ease !important;
+        }
+
+        .social-icons a:hover {
+          background-color: #d4a373 !important;
+          color: #ffffff !important;
+        }
+
+        .horaires-wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 40px;
+        }
+
+        .horaires-box {
+          max-width: 400px;
+          text-align: center;
+        }
+
+        @media (max-width: 768px) {
+          .about {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+
+          .about .text-box {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.5;
+          }
+
+          .about img {
+            width: 100%;
+            height: auto;
+          }
+
+          .foto-medio {
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+          }
+
+          .menu-actualidade-container {
+            flex-direction: column;
+          }
+
+          .menu-image-section {
+            width: 100%;
+          }
+          
+          .actualidade-section {
+            width: 100%;
+          }
+  </style>
+</head>
+
+<body>
+
+  <header id="header">
+    <h1>L'INSTANT GOURMAND</h1>
+    <nav>
+      <a href="#inicio">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#menu & Actualités">Menu & Actualités</a>
+      <a href="#produits">Produits</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section id="inicio" class="hero">
+    <h2>BIENVENUE AU L'INSTANT GOURMAND</h2>
+    <p></p>
+    <img src="img/logo.jpg" alt="Hero" class="hero-image">
+  </section>
+
+  <section id="apropos" class="parallax-bg">
+    <h2 class="section-title">À propos</h2>
+
+    <div class="about">
+      <img src="img/outside.jpg" alt="Devanture de la boulangerie" style="border-radius: 15px;">
+
+      <div class="text-box">
+        L'Instant Gourmand est une boulangerie-pâtisserie située 32 rue Jules Lallemand, dans le centre-ville de Rennes.
+        Cette boutique artisanale propose une sélection de produits frais et faits maison, tels que des viennoiseries,
+        des pains, des gâteaux et des desserts. Les produits sont préparés quotidiennement par une équipe de
+        boulangers-pâtissiers expérimentés, soucieux de la qualité et du savoir-faire traditionnel. Le cadre agréable et
+        convivial invite les clients à prendre un moment de détente et de plaisir gourmand. L'Instant Gourmand est une
+        adresse incontournable pour les amateurs de saveurs authentiques et de produits de qualité.
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu-section parallax-bg">
+    <h2 class="section-title">Menu & Actualités</h2>
+
+    <div class="menu-actualidade-container">
+      <div class="menu-image-section">
+        <img src="img/menu.jpg" alt="Menu" class="menu-main-image" onclick="openModal(this.src)"
+          style="cursor: pointer; transition: 0.3s;">
+      </div>
+
+      <div class="actualidade-section">
+  <h3 style="color: #ffdd9b; font-size: 1.5rem; margin-bottom: 20px; text-align: center;">
+    Actualités
+  </h3>
+
+  <div class="actualite-image-box">
+    <img src="actualites/1.jpg" alt="Actualité" onclick="openModal(this.src)">
+  </div>
+</div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="produits" class="parallax-bg">
+    <h2 class="section-title">Produits</h2>
+    <div class="menu-grid">
+
+      <div class="glass-card menu-item">
+        <img src="img/fond2.jpg" alt="">
+        <h3></h3>
+        <p></p>
+      </div>
+
+      <div class="glass-card menu-item">
+        <img src="img/.jpg" alt="">
+        <h3><!-- NOM PRODUIT 2 --></h3>
+        <p></p>
+      </div>
+
+      <div class="glass-card menu-item">
+        <img src="img/.jpg" alt="">
+        <h3><!-- NOM PRODUIT 3 --></h3>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos" class="parallax-bg">
+    <h2 class="section-title">Photos</h2>
+
+    <div class="galeria-grid">
+
+      <div class="glass-card">
+        <img src="img/fond2.jpg" alt="Photo 1" onclick="openModal(this.src)">
+      </div>
+
+      <div class="glass-card">
+        <img src="img/photo2.jpg" alt="Photo 2" onclick="openModal(this.src)">
+      </div>
+
+      <div class="glass-card">
+        <img src="img/photo3.jpg" alt="Photo 3" onclick="openModal(this.src)">
+      </div>
+
+      <div class="glass-card">
+        <img src="img/photo4.jpg" alt="Photo 4" onclick="openModal(this.src)">
+      </div>
+
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="">
+    </div>
+  </div>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="glass-card" style="max-width:700px;margin:0 auto;text-align:center;">
+      <p><strong>Adresse :</strong> 32 Rue Jules Lallemand, 35000 Rennes</p>
+      <p><strong>Téléphone :</strong> 02 23 48 80 05</p>
+      <p><strong>Email :</strong> linstantgourmand35@gmail.com</p>
+      <h2 class="reseaux-section"></h2>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/p/LInstant-Gourmand-100089331460940/" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/linstantgourmand35" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="mailto:linstantgourmand35@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-row">
+
+      <div class="map-box">
+        <iframe
+          src="https://maps.google.com/?q=L'Instant+Gourmand,+32+Rue+Jules+Lallemand,+35000+Rennes,+France&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="horaires-wrapper">
+        <div class="glass-card horaires-box">
+          <h3>Horaires d’ouverture</h3>
+          <p><strong>Lundi :</strong> 07h00-14h00 – 15h30-19h00</p>
+          <p><strong>Mardi :</strong> 07h00-14h00 – 15h30-19h00</p>
+          <p><strong>Mercredi :</strong> 07h00-14h00 – 15h30-19h00</p>
+          <p><strong>Jeudi :</strong> 07h00-14h00 – 15h30-19h00</p>
+          <p><strong>Vendredi :</strong> 07h00-14h00 – 15h30-19h00</p>
+          <p><strong>Samedi :</strong> 07h30-13h00</p>
+          <p><strong>Dimanche :</strong> Fermé</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer>
+    <p>L'Instant Gourmand - COPYRIGHT 2026</p>
+  </footer>
+
+  <script>
+    // Scroll header effect
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("header");
+      if (window.scrollY > 50) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    });
+
+    // Modal functions
+    function openModal(src) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modalImg.src = src;
+      modal.classList.add("active");
+      // Sur mobile : empêcher le scroll du body. Sur PC : autoriser le scroll interne du modal.
+      if (window.innerWidth <= 768) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("modal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    document.getElementById("modal").addEventListener("click", (e) => {
+      if (e.target.id === "modal") closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    // Pinch-to-zoom and pan for modal image (mobile only)
+    (function () {
+      let modalImg = document.getElementById('modal-img');
+      let isPinching = false;
+      let startDist = 0;
+      let lastScale = 1;
+      let currentScale = 1;
+      let isPanning = false;
+      let startPan = { x: 0, y: 0 };
+      let lastPan = { x: 0, y: 0 };
+      let lastTap = 0;
+
+      function getDist(touches) {
+        const dx = touches[0].clientX - touches[1].clientX;
+        const dy = touches[0].clientY - touches[1].clientY;
+        return Math.hypot(dx, dy);
+      }
+
+      function getMid(touches) {
+        return {
+          x: (touches[0].clientX + touches[1].clientX) / 2,
+          y: (touches[0].clientY + touches[1].clientY) / 2
+        };
+      }
+
+      function setTransform() {
+        modalImg.style.transform = `translate(${lastPan.x}px, ${lastPan.y}px) scale(${currentScale})`;
+      }
+
+      function onTouchStart(e) {
+        if (window.innerWidth > 768) return; // desktop: do nothing
+        if (!modalImg) return;
+        if (e.touches.length === 2) {
+          isPinching = true;
+          startDist = getDist(e.touches);
+          lastScale = currentScale;
+          e.preventDefault();
+        } else if (e.touches.length === 1 && currentScale > 1) {
+          isPanning = true;
+          startPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+          e.preventDefault();
+        }
+        // double-tap to reset
+        const now = Date.now();
+        if (e.touches.length === 1 && now - lastTap < 300) {
+          // reset
+          currentScale = 1; lastScale = 1; lastPan = { x: 0, y: 0 }; startPan = { x: 0, y: 0 };
+          setTransform();
+        }
+        lastTap = now;
+      }
+
+      function onTouchMove(e) {
+        if (window.innerWidth > 768) return;
+        if (isPinching && e.touches.length === 2) {
+          const dist = getDist(e.touches);
+          let scale = lastScale * (dist / startDist);
+          scale = Math.max(1, Math.min(scale, 4));
+          currentScale = scale;
+          setTransform();
+          e.preventDefault();
+        } else if (isPanning && e.touches.length === 1) {
+          const dx = e.touches[0].clientX - startPan.x;
+          const dy = e.touches[0].clientY - startPan.y;
+          lastPan = { x: lastPan.x + dx, y: lastPan.y + dy };
+          startPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+          setTransform();
+          e.preventDefault();
+        }
+      }
+
+      function onTouchEnd(e) {
+        if (window.innerWidth > 768) return;
+        if (isPinching) {
+          isPinching = false;
+          lastScale = currentScale;
+        }
+        if (isPanning) {
+          isPanning = false;
+        }
+      }
+
+      // Attach listeners when modal opens and remove when closed
+      const modal = document.getElementById('modal');
+      modal.addEventListener('transitionstart', () => { });
+      modal.addEventListener('click', () => { });
+
+      // Use event delegation: always have handlers but they only act on mobile when modal active
+      document.addEventListener('touchstart', function (e) {
+        if (!modal.classList.contains('active')) return;
+        onTouchStart(e);
+      }, { passive: false });
+
+      document.addEventListener('touchmove', function (e) {
+        if (!modal.classList.contains('active')) return;
+        onTouchMove(e);
+      }, { passive: false });
+
+      document.addEventListener('touchend', function (e) {
+        if (!modal.classList.contains('active')) return;
+        onTouchEnd(e);
+      });
+
+      // Reset transform on close
+      const origClose = window.closeModal;
+      window.closeModal = function () {
+        origClose();
+        if (modalImg) { currentScale = 1; lastScale = 1; lastPan = { x: 0, y: 0 }; modalImg.style.transform = '' }
+      }
+    })();
+  </script>
+
+  <script>
+
+</body>
+
+</html>
