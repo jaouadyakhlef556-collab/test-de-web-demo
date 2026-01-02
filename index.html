@@ -532,10 +532,19 @@
       color: #ffffff !important;
     }
     
-    #header.scrolled {
+    #header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px;
+      color: white;
+    }
+    
+     #header.scrolled {
       background-color: rgba(0, 0, 0, 0.85);
       transition: background-color 0.3s ease;
-    }
+     }
 
 /* MOBILE FIX — TODO LIMPIO Y CORRECTO */
 @media (max-width: 768px) {
@@ -1012,6 +1021,7 @@
   
 </body>
 </html>
+
 
 
 
