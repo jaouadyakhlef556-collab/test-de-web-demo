@@ -1,12 +1,5 @@
-html lang="fr">
-
+<html lang="fr">
 <head>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@300;500;700&display=swap"
-    rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,10 +7,8 @@ html lang="fr">
 
   <meta name="description"
     content="L'Instant Gourmand, boulangerie-pâtisserie artisanale située au 32 rue Jules Lallemand à Rennes. Pains, viennoiseries, pâtisseries, galettes, bûches et créations maison. Commandes au 02 23 48 80 05.">
-
   <meta name="robots" content="index, follow">
   <meta name="author" content="L'Instant Gourmand">
-
   <meta name="keywords"
     content="boulangerie Rennes, pâtisserie Rennes, artisan boulanger Rennes, viennoiseries Rennes, galette des rois Rennes, bûches de Noël Rennes, L'Instant Gourmand Rennes, pain artisanal Rennes, pâtisseries artisanales Rennes">
 
@@ -55,7 +46,12 @@ html lang="fr">
     "https://www.facebook.com/p/LInstant-Gourmand-100089331460940/"
   ]
 }
-</script>
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@300;500;700&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -248,25 +244,24 @@ html lang="fr">
       box-shadow: 0 0 20px rgba(255, 221, 155, 0.5);
     }
 
-   .menu-actualidade-container {
-     display: flex;
-     justify-content: center;
-     gap: 40px;
-     align-items: flex-start;
-   }
-    
-   .actualidade-section {
-     width: 45%;
-     background: var(--glass);
-     border: var(--border-glow);
-     border-radius: 15px;
-     padding: 30px;
-     backdrop-filter: blur(15px);
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
- 
+    .menu-actualidade-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .actualidade-section {
+      width: 45%;
+      background: var(--glass);
+      border: var(--border-glow);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .menu-image-section img {
       width: 80%;
@@ -333,7 +328,6 @@ html lang="fr">
       opacity: 1;
     }
 
-
     .section-title {
       font-size: 2rem;
       font-weight: 700;
@@ -380,8 +374,6 @@ html lang="fr">
       width: 100%;
       height: auto;
       border-radius: 15px;
-      touch-action: none;
-      /* allow capture of pinch/pan gestures on mobile */
     }
 
     .close-modal {
@@ -488,23 +480,23 @@ html lang="fr">
       margin-bottom: 15px;
       font-family: 'Orbitron', sans-serif;
     }
-    
+
     .actualite-image-box {
       width: 100%;
-      max-width: 650px; 
+      max-width: 650px;
       margin: 0 auto;
       border-radius: 15px;
-      overflow: hidden; 
+      overflow: hidden;
     }
 
-   .actualite-image-box img {
-     width: 100%;
-     height: auto; 
-     display: block;
-     object-fit: cover; 
-     cursor: pointer;
-     border-radius: 15px;
-   }
+    .actualite-image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 15px;
+    }
 
     .glass-card .social-icons {
       display: flex !important;
@@ -531,176 +523,161 @@ html lang="fr">
       background: #d4a373 !important;
       color: #ffffff !important;
     }
-    
-    #header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 20px;
-      color: white;
+
+    /* mobile layout */
+    @media (max-width: 768px) {
+      .contact-row {
+        flex-direction: column;
+      }
+
+      header {
+        padding: 10px 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 14px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 80px 20px 40px;
+      }
+
+      .about {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+
+      .about img {
+        width: 100%;
+        height: auto;
+      }
+
+      .text-box {
+        font-size: 16px;
+        padding: 20px;
+      }
+
+      .menu-grid,
+      .galeria-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-box {
+        height: 250px;
+      }
+
+      .horaires-box {
+        padding: 20px;
+        font-size: 16px;
+      }
+
+      .menu-actualidade-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .actualidade-section {
+        width: 100%;
+        background: var(--glass);
+        border: var(--border-glow);
+        border-radius: 15px;
+        padding: 30px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+      }
+
+      .zoom-static {
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      .zoom-static img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        background-color: #fff;
+      }
     }
-    
-    #header.scrolled {
-      background-color: rgba(0, 0, 0, 0.85);
-      transition: background-color 0.3s ease;
-     }
-    .body-no-scroll {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
-     }
-     
-/* MOBILE FIX — TODO LIMPIO Y CORRECTO */
-@media (max-width: 768px) {
-
-  .contact-row {
-    flex-direction: column;
-  }
-
-  header {
-    padding: 10px 20px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  header h1 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  nav a {
-    margin: 0 10px;
-    font-size: 14px;
-  }
-
-  .hero h2 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 80px 20px 40px;
-  }
-
-  .about {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-
-  .about img {
-    width: 100%;
-    height: auto;
-  }
-
-  .text-box {
-    font-size: 16px;
-    padding: 20px;
-  }
-
-  .menu-grid,
-  .galeria-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .map-box {
-    height: 250px;
-  }
-
-  .horaires-box {
-    padding: 20px;
-    font-size: 16px;
-  }
-
- .menu-actualidade-container {
-   display: flex;
-   flex-direction: column;
-  }
- 
-  .actualidade-section {
-    width: 100%;
-    background: var(--glass);
-    border: var(--border-glow);
-    border-radius: 15px;
-    padding: 30px;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-  }
-
-  .zoom-static {
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 10px;
-  }
-
-  .zoom-static img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    background-color: #fff;
-    touch-action: none;
-    
-    }
-  }
 
     @media (min-width: 769px) {
-  .menu-actualidade-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-  }
+      .menu-actualidade-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+      }
 
-  .actualidade-section {
-    width: 45%;
-    background: var(--glass);
-    border: var(--border-glow);
-    border-radius: 15px;
-    padding: 30px;
-    backdrop-filter: blur(15px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+      .actualidade-section {
+        width: 45%;
+        background: var(--glass);
+        border: var(--border-glow);
+        border-radius: 15px;
+        padding: 30px;
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .zoom-static {
-    width: 100%;
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 10px;
-  }
+      .zoom-static {
+        width: 100%;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 10px;
+      }
 
-  .zoom-static img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    background-color: #fff;
-    touch-action: none;
-  }
+      .zoom-static img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        background-color: #fff;
+      }
 
-  .menu-image-section {
-    display: none;
-  } 
+      .menu-image-section {
+        display: none;
+      }
+    }
 
- .parallax-bg {
-    background-attachment: scroll !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-}
+    /* mobile parallax fix */
+    @media (max-width: 768px) {
+      .parallax-bg {
+        background-attachment: scroll !important;
+        background-position: center !important;
+        background-size: cover !important;
+      }
+    }
 
+    /* body lock when modal open (used with JS scroll restore) */
+    .body-no-scroll {
+      position: fixed;
+      width: 100%;
+      overflow: hidden;
+    }
   </style>
 </head>
-
 <body>
 
   <header id="header">
@@ -714,7 +691,6 @@ html lang="fr">
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
 
   <section id="inicio" class="hero">
     <h2>BIENVENUE</h2>
@@ -739,32 +715,32 @@ html lang="fr">
     </div>
   </section>
 
-<section id="menu" class="menu-section parallax-bg">
-  <h2 class="section-title">Menu & Actualités</h2>
+  <section id="menu" class="menu-section parallax-bg">
+    <h2 class="section-title">Menu & Actualités</h2>
 
-  <div class="menu-actualidade-container">
+    <div class="menu-actualidade-container">
 
-    <!-- MENU -->
-    <div class="actualidade-section">
-      <h2 class="section-title">Menu</h2>
-      <div class="zoom-static">
-        <img src="menus/menu.jpg" alt="Menu">
+      <!-- MENU -->
+      <div class="actualidade-section">
+        <h2 class="section-title">Menu</h2>
+        <div class="zoom-static">
+          <img src="menus/menu.jpg" alt="Menu">
+        </div>
       </div>
-    </div>
 
-    <!-- ACTUALITÉS -->
-    <div class="actualidade-section">
-      <h2 class="section-title">Actualités</h2>
-      <div class="zoom-static">
-        <img src="actualites/1.jpg" alt="Actualité">
+      <!-- ACTUALITÉS -->
+      <div class="actualidade-section">
+        <h2 class="section-title">Actualités</h2>
+        <div class="zoom-static">
+          <img src="actualites/1.jpg" alt="Actualité">
+        </div>
       </div>
+
     </div>
-
-  </div>
-</section>
-
-  <section id="produits" class="parallax-bg">
+  </section>
+    <section id="produits" class="parallax-bg">
     <h2 class="section-title">Produits</h2>
+
     <div class="menu-grid">
 
       <div class="glass-card menu-item">
@@ -781,9 +757,10 @@ html lang="fr">
 
       <div class="glass-card menu-item">
         <img src="img/produit3.jpg" alt="">
-        <h3>DESCRIPITION DE VOTRE PRODUIT</h3>
+        <h3>DESCRIPTION DE VOTRE PRODUIT</h3>
         <p></p>
       </div>
+
     </div>
   </section>
 
@@ -791,30 +768,27 @@ html lang="fr">
     <h2 class="section-title">Photos</h2>
 
     <div class="galeria-grid">
-      
-     
+
       <div class="glass-card">
-        <img src="img/fond2.jpg" alt="Photo 1" 
+        <img src="img/fond2.jpg" alt="Photo 1">
       </div>
-       
-    
-      <div class="glass-card">  
-        <img src="img/photo2.jpg" alt="Photo 2" 
-      </div>
-        
-     
+
       <div class="glass-card">
-        <img src="img/photo3.jpg" alt="Photo 3" 
+        <img src="img/photo2.jpg" alt="Photo 2">
       </div>
-        
-      
+
       <div class="glass-card">
-        <img src="img/photo4.jpg" alt="Photo 4" 
+        <img src="img/photo3.jpg" alt="Photo 3">
+      </div>
+
+      <div class="glass-card">
+        <img src="img/photo4.jpg" alt="Photo 4">
       </div>
 
     </div>
   </section>
 
+  <!-- Modal (only used for Menu & Actualités) -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close-modal" onclick="closeModal()">&times;</span>
@@ -826,10 +800,10 @@ html lang="fr">
     <h2 class="section-title">Contact</h2>
 
     <div class="glass-card" style="max-width:700px;margin:0 auto;text-align:center;">
-      <p><strong>Adresse :</strong> 32 Rue Jules Lallemand,Rennes</p>
+      <p><strong>Adresse :</strong> 32 Rue Jules Lallemand, Rennes</p>
       <p><strong>Téléphone :</strong> 02 23 48 80 05</p>
       <p><strong>Email :</strong> linstantgourmand35@gmail.com</p>
-      <h2 class="reseaux-section"></h2>
+
       <div class="social-icons">
         <a href="https://www.facebook.com/p/LInstant-Gourmand-100089331460940/" target="_blank" aria-label="Facebook">
           <i class="fa-brands fa-facebook"></i>
@@ -865,14 +839,14 @@ html lang="fr">
           <p><strong>Dimanche :</strong> Fermé</p>
         </div>
       </div>
-    </div>
+
     </div>
   </section>
+
   <footer>
     <p>L'Instant Gourmand - COPYRIGHT 2026</p>
   </footer>
-
-  <script>    
+  <script>
 /* ============================
    HEADER SCROLL EFFECT
 ============================ */
@@ -885,6 +859,8 @@ window.addEventListener("scroll", () => {
 /* ============================
    MODAL OPEN / CLOSE
 ============================ */
+let scrollPos = 0;
+
 function openModal(src) {
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modal-img");
@@ -892,17 +868,11 @@ function openModal(src) {
   modalImg.src = src;
   modal.classList.add("active");
 
+  // mobile scroll freeze without jump
   if (window.innerWidth <= 768) {
-    scrollPos = window.scrollY; 
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollPos}px`;
-    document.body.style.width = "100%";
-  }
-}
-
-  // Disable body scroll on mobile
-  if (window.innerWidth <= 768) {
+    scrollPos = window.scrollY;
     document.body.classList.add("body-no-scroll");
+    document.body.style.top = `-${scrollPos}px`;
   }
 }
 
@@ -910,145 +880,28 @@ function closeModal() {
   const modal = document.getElementById("modal");
   modal.classList.remove("active");
 
+  // restore scroll position
   if (window.innerWidth <= 768) {
-    document.body.style.position = "";
+    document.body.classList.remove("body-no-scroll");
     document.body.style.top = "";
-    window.scrollTo(0, scrollPos); 
+    window.scrollTo(0, scrollPos);
   }
 }
 
-// Close modal when clicking outside image
+// close modal when clicking outside image
 document.getElementById("modal").addEventListener("click", (e) => {
   if (e.target.id === "modal") closeModal();
 });
 
-// Close modal with ESC
+// close modal with ESC
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
 
 /* ============================
-   PINCH-TO-ZOOM (MOBILE)
+   ONLY Menu & Actualités open modal
 ============================ */
-(function () {
-  let modalImg = document.getElementById('modal-img');
-  let isPinching = false;
-  let startDist = 0;
-  let lastScale = 1;
-  let currentScale = 1;
-
-  let isPanning = false;
-  let startPan = { x: 0, y: 0 };
-  let lastPan = { x: 0, y: 0 };
-
-  let lastTap = 0;
-
-  function getDist(touches) {
-    const dx = touches[0].clientX - touches[1].clientX;
-    const dy = touches[0].clientY - touches[1].clientY;
-    return Math.hypot(dx, dy);
-  }
-
-  function setTransform() {
-    modalImg.style.transform =
-      `translate(${lastPan.x}px, ${lastPan.y}px) scale(${currentScale})`;
-  }
-
-  function onTouchStart(e) {
-    if (window.innerWidth > 768) return;
-    if (!modalImg) return;
-
-    // Pinch
-    if (e.touches.length === 2) {
-      isPinching = true;
-      startDist = getDist(e.touches);
-      lastScale = currentScale;
-      e.preventDefault();
-    }
-
-    // Pan
-    else if (e.touches.length === 1 && currentScale > 1) {
-      isPanning = true;
-      startPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-      e.preventDefault();
-    }
-
-    // Double tap reset
-    const now = Date.now();
-    if (e.touches.length === 1 && now - lastTap < 300) {
-      currentScale = 1;
-      lastScale = 1;
-      lastPan = { x: 0, y: 0 };
-      startPan = { x: 0, y: 0 };
-      setTransform();
-    }
-    lastTap = now;
-  }
-
-  function onTouchMove(e) {
-    if (window.innerWidth > 768) return;
-
-    // Pinch
-    if (isPinching && e.touches.length === 2) {
-      const dist = getDist(e.touches);
-      let scale = lastScale * (dist / startDist);
-      scale = Math.max(1, Math.min(scale, 4));
-      currentScale = scale;
-      setTransform();
-      e.preventDefault();
-    }
-
-    // Pan
-    else if (isPanning && e.touches.length === 1) {
-      const dx = e.touches[0].clientX - startPan.x;
-      const dy = e.touches[0].clientY - startPan.y;
-
-      lastPan = { x: lastPan.x + dx, y: lastPan.y + dy };
-      startPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-
-      setTransform();
-      e.preventDefault();
-    }
-  }
-
-  function onTouchEnd() {
-    if (window.innerWidth > 768) return;
-
-    if (isPinching) isPinching = false;
-    if (isPanning) isPanning = false;
-  }
-
-  // Attach listeners
-  document.addEventListener('touchstart', (e) => {
-    if (!modal.classList.contains('active')) return;
-    onTouchStart(e);
-  }, { passive: true });
-
-  document.addEventListener('touchmove', (e) => {
-    if (!modal.classList.contains('active')) return;
-    onTouchMove(e);
-  }, { passive: false });
-
-  document.addEventListener('touchend', (e) => {
-    if (!modal.classList.contains('active')) return;
-    onTouchEnd(e);
-  });
-
-  // Reset zoom on close
-  const originalClose = window.closeModal;
-  window.closeModal = function () {
-    originalClose();
-    currentScale = 1;
-    lastScale = 1;
-    lastPan = { x: 0, y: 0 };
-    modalImg.style.transform = "";
-  };
-})();
-
-/* ============================
-   CLICK TO OPEN MODAL
-============================ */
-document.querySelectorAll('.menu-section .zoom-static img').forEach(img => {
+document.querySelectorAll('#menu .zoom-static img').forEach(img => {
   img.style.cursor = "pointer";
   img.addEventListener('click', () => openModal(img.src));
 });
@@ -1056,3 +909,4 @@ document.querySelectorAll('.menu-section .zoom-static img').forEach(img => {
   
 </body>
 </html>
+
